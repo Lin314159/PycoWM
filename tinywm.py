@@ -1,14 +1,9 @@
-# TinyWM is written by Nick Welch <nick@incise.org> in 2005 & 2011.
-#
-# This software is in the public domain
-# and is provided AS IS, with NO WARRANTY.
-
 from Xlib.display import Display
 from Xlib import X, XK
 
 dpy = Display()
 
-dpy.screen().root.grab_key(dpy.keysym_to_keycode(XK.string_to_keysym("F1")), X.Mod1Mask, 1,
+dpy.screen().root.grab_key(dpy.keysym_to_keycode(XK.string_to_keysym("R")), X.Mod1Mask, X.ControlMask, 1,
         X.GrabModeAsync, X.GrabModeAsync)
 dpy.screen().root.grab_button(1, X.Mod1Mask, 1, X.ButtonPressMask|X.ButtonReleaseMask|X.PointerMotionMask,
         X.GrabModeAsync, X.GrabModeAsync, X.NONE, X.NONE)
@@ -33,4 +28,3 @@ while 1:
             height = max(1, attr.height + (start.detail == 3 and ydiff or 0)))
     elif ev.type == X.ButtonRelease:
         start = None
-
