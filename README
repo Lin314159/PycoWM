@@ -1,4 +1,5 @@
 TinyWM is written by Nick Welch <nick@incise.org> in 2005 & 2011.
+The edited code was written by Daniel Amdurer in 2015.
 
 This software is in the public domain and is provided AS IS, with NO WARRANTY.
 
@@ -11,28 +12,12 @@ basics.
 Files:
 
   Makefile: highly advanced build system
-  tinywm.c: the code
-  annotated.c: same, but with tons of rambling comments about everything
-  tinywm.py: a python version (requires CVS python-xlib due to a bug)
+  tinywm.py: The code (requires CVS python-xlib due to a bug)
 
 Usage:
 
   Focus follows pointer.
-  Alt+Button1, drag: interactive window move
-  Alt+Button3, drag: interactive window resize
-  Alt+F1: raise focused window
-
-Misc:
-  
-  Another very small window manager is failsafewm.  Originally I started
-  hacking on it, as there was quite a bit of stuff in it that I thought was
-  unneeded.  I wound up rewriting it from scratch, with just the bare
-  necessities, and that became TinyWM.
-
-    http://freshmeat.net/projects/failsafewm/
-
-  Yet another small -- but in comparison to TinyWM, big -- window manager is
-  aewm.  It's a good example for learning about writing a window manager.
-
-      http://www.red-bean.com/~decklin/aewm/
+  Alt+Button1, drag (Left-click and drag): interactive window move
+  Alt+Button3, drag (Right-click and drag): interactive window resize
+  Ctrl-Alt-R: raise focused window
 
